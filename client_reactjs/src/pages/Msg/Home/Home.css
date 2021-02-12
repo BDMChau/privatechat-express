@@ -1,0 +1,86 @@
+.home-page {
+  position: relative;
+  margin: 0 0px;
+  background-color: #fff;
+  height: 94vh;
+}
+
+.chat-container {
+  position: relative;
+  display: flex;
+  height: 100%;
+}
+
+.message-container {
+  width: 100%;
+}
+
+.welcome-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  color: #000;
+}
+
+.welcome-banner .text-welcome {
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.welcome-banner .text-desc {
+  font-weight: 300;
+  font-size: 26px;
+  text-align: center;
+}
+
+.ava-welcome {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.avatar-welcome {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 375px) {
+  .message-container {
+    width: 275px;
+    height: 93vh;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  .message-container {
+    width: 100%;
+    height: 93vh;
+  }
+
+  .welcome-banner .text-welcome {
+    font-size: 25px;
+  }
+
+  .welcome-banner .text-desc {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .message-container {
+    height: 95vh;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .message-container {
+    height: 96vh;
+  }
+}

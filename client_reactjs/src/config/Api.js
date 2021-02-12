@@ -1,0 +1,1 @@
+export const endDomain = 'https://server-privatechat.herokuapp.com'

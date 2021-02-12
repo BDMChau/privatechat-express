@@ -1,0 +1,62 @@
+@import "~antd/dist/antd.css";
+
+body,
+html {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Segoe UI" !important;
+  background-color: #fff;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+}
+
+::placeholder {
+  color: #000000ad !important;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #898989;
+}
+
+/* notification */
+.ant-notification-topRight {
+  top: 55px !important;
+  right: 10px !important;
+}
+
+.ant-notification-notice-closable {
+  background: #1a71bf45;
+}
+
+.ant-notification-notice-message {
+  color: #3f3f3f;
+}

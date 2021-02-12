@@ -1,0 +1,22 @@
+.sendemail-input{
+    margin-bottom: 20px;
+    border: none;
+    padding: 7px 10px;
+    color: black;
+    font-size: 16px;
+}
+.sendemail-bottom{
+    width: 342px;
+}
+
+.btn-cancle-email,
+.btn-submit-email{
+    margin: 0px 10px 0px 10px;
+    width: 40%;
+    font-weight: 600;
+    color: #ffffff94;
+    transition: 0.3s;
+    text-transform: capitalize;
+    box-shadow: none !important;
+    border: none;
+}

@@ -1,0 +1,1 @@
+export const defaultAvatar = 'https://res.cloudinary.com/do3l051oy/image/upload/v1599018830/defaultAvatar.jpg'

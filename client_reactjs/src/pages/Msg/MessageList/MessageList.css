@@ -1,0 +1,105 @@
+.user {
+  background: transparent;
+  padding: 10px 5px 10px 10px;
+  list-style: none;
+  width: 100%;
+  word-break: break-all;
+  color: #000;
+  cursor: default;
+}
+
+.onl-off-space {
+  margin-left: 12px;
+  color: #6e6e7c;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.chat-list {
+  width: 350px;
+  background: #fff;
+  border: none;
+  overflow-y: auto;
+  border-right: 1px solid #0000002e;
+}
+
+/* .user:hover {
+  background: #b9d3e8bd;
+  transition: 0.3s;
+  color: #000;
+} */
+
+.active {
+  background: #b9d3e8bd;
+  color: #000;
+}
+
+.list-user {
+  display: flex;
+  align-items: center;
+}
+
+.user-ava {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+}
+
+.user-avatar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+}
+
+.latest-mess {
+  font-size: 14px;
+  padding: 0 0 0 10px;
+  white-space: nowrap;
+  width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-name {
+  margin: 0;
+  padding-left: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media only screen and (min-height: 1024px) {
+  .user-ava {
+    width: 40px;
+    height: 40px;
+  }
+
+  .user-name {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  .onl-off-space {
+    margin-left: 7px;
+  }
+
+  .user {
+    border-radius: 0%;
+    padding: 7px 0px 7px 0px;
+    width: 100%;
+  }
+
+  .chat-list {
+    width: 100px;
+    background: #fff;
+    border-right: 1px solid #00000017;
+  }
+}
