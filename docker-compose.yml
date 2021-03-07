@@ -1,12 +1,12 @@
 version: "3"
 services:
     client-reactjs:
-        container_name: client
+        container_name: client-Chat
         build: 
             dockerfile: Dockerfile
-            context: ./client-reactjs
+            context: ./client_reactjs
         volumes:
-            - ./client-reactjs:/client
+            - ./client_reactjs:/client
         ports:
             - 3000:3000
         depends_on: 
@@ -14,12 +14,12 @@ services:
         stdin_open: true
 
     server-nodejs:
-        container_name: server-api
+        container_name: server-Chat-api
         build: 
             dockerfile: Dockerfile
-            context: ./server-nodejs_expressjs
+            context: ./server_nodejs_expressjs
         volumes:
-            - ./server-nodejs/expressjs:/usr/src/app
+            - ./server_nodejs_expressjs:/usr/src/app
         ports:
             - 4000:4000
         links:
