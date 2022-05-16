@@ -1,1 +1,1 @@
-export const endDomain = 'https://server-privatechat.herokuapp.com'
+export const endDomain = 'http://localhost:4000/'
