@@ -1,1 +1,1 @@
-export const endDomain = 'http://localhost:4000/'
+export const endDomain = 'http://localhost:4000'

@@ -48,7 +48,7 @@ const msgApi = {
 
     postImageToCloud: (data) => {
         const url = 'https://api.cloudinary.com/v1_1/do3l051oy/image/upload';
-        
+
         return axiosClient.post(url, data, {
             headers: {
                 'Content-Type': 'multipart/form-data'

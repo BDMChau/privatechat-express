@@ -7,7 +7,7 @@ import { stickerPiyomaruArray } from '../../../utils/sticker/piyomaru'
 import { AreaChartOutlined, SendOutlined, TagsOutlined } from '@ant-design/icons';
 import { Context } from '../../../context/AppContext';
 import Axios from 'axios';
-
+import msgApi from "../../../api/msgApi"
 
 const SendMessageForm = (props) => {
     const { selectedId, conversationData } = props;
@@ -61,35 +61,35 @@ const SendMessageForm = (props) => {
     }
 
 
-    const handlePostImage = async (files) => {
+    const handlePostImage = async (file) => {
         try {
-            const fileForm = new FormData;
-            Object.values(files).map((file) => {
-                fileForm.append("file", file);
-            })
+            // const fileForm = new FormData;
+            // Object.values(files).map((file) => {
+            //     fileForm.append("file", file);
+            // })
 
-            Axios({
-                //url: "http://filesuploadserver.herokuapp.com/api/user/uploadfiles",
-                url: "http://localhost:4000/api/user/uploadfiles",
+            // Axios({
+            //     //url: "http://filesuploadserver.herokuapp.com/api/user/uploadfiles",
+            //     url: "http://localhost:4000/api/user/uploadfiles",
 
-                method: "post",
-                headers: {
-                    'Content-Type': 'multipart/form-data',
-                    "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiIxZjM2NDEyNGJmNjFhMGNhMmZmMyIsInVzZXJuYW1lIjoiTWluaENoYXUiLCJpYXQiOjE2MDk2NzI5MzN9.SEf_Ji7Oy-_7juSBVo7cLgaRVwqHjJbTIzC0n4qcIDo"
-                },
-                data: fileForm
-            }).then((res) => {
-                console.log(res.data)
-            })
+            //     method: "post",
+            //     headers: {
+            //         'Content-Type': 'multipart/form-data',
+            //         "Authorization": JSON.parse(localStorage.getItem('token'))
+            //     },
+            //     data: fileForm
+            // }).then((res) => {
+            //     console.log(res.data)
+            // })
 
-            // var formData = new FormData();
-            // formData.append("file", file);
-            // formData.append("upload_preset", "chatApp");
-            // formData.append("cloudinary_name", "do3l051oy");
-            // formData.append('folder', 'chatApp_Avatar');
+            let formData = new FormData();
+            formData.append("file", file);
+            formData.append("upload_preset", "chatApp");
+            formData.append("cloudinary_name", "do3l051oy");
+            formData.append('folder', 'chatApp_Avatar');
 
-            // const dataResponse = await msgApi.postImageToCloud(formData);
-            // setUrlImages(dataResponse.url);
+            const dataResponse = await msgApi.postImageToCloud(formData);
+            setUrlImages(dataResponse.url);
             return;
 
         } catch (error) {
@@ -147,10 +147,10 @@ const SendMessageForm = (props) => {
                             value={""}
                             title="Photo"
                             type="file"
-                            onChange={(e) => handlePostImage(e.target.files)}
+                            onChange={(e) => handlePostImage(e.target.files[0])}
                             onMouseOver={() => setHoverImageBtn(true)}
                             onMouseLeave={() => setHoverImageBtn(false)}
-                            multiple={true}
+                            multiple={false}
 
                         />
                         <AreaChartOutlined className="photo-icon" style={{ color: hoverImageBtn ? '#0e7adc' : '#238ff1' }} />
